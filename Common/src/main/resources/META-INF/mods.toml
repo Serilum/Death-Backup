@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="*"
 license="All rights reserved"
-issueTrackerURL="https://github.com/ricksouth/serilum-mc-mods/labels/Mod:%20Death%20Backup"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Death%20Backup"
 logoFile="icon.png"
 
 [[mods]]
 modId="deathbackup"
-version="3.1"
+version="3.2"
 displayName="Death Backup"
-displayURL="https://curseforge.com/minecraft/mc-mods/death-backup"
+displayURL="https://serilum.com/mod/death-backup"
 authors="Rick South"
 description='''Creates a backup of an inventory right before a player death, which can be loaded via a command.
 '''
@@ -21,13 +21,15 @@ If you would like to contribute too, check out https://ricksouth.com/donate. App
 
 [[dependencies.deathbackup]]
     modId="collective"
+    type="required"
     mandatory=true
-    versionRange="[7.3,)"
+    versionRange="[7.21,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.deathbackup]]
     modId="minecraft"
+    type="required"
     mandatory=true
     versionRange="[1.19.2]"
     ordering="NONE"
