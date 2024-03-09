@@ -1,8 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.natamus.deathbackup.neoforge.mixin",
-  "plugin": "com.natamus.collective.neoforge.mixin.plugin.NeoForgeMixinConfigPlugin",
+  "package": "com.natamus.deathbackup.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
 

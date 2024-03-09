@@ -2,7 +2,7 @@ package com.natamus.deathbackup.events;
 
 import com.natamus.collective.functions.DateFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.deathbackup.config.ConfigHandler;
 import com.natamus.deathbackup.util.Util;
 
@@ -25,7 +25,7 @@ public class DeathBackupEvent {
 		
 		if (ConfigHandler.sendBackupReminderMessageToThoseWithAccessOnDeath) {
 			if (player.hasPermissions(2)) {
-				StringFunctions.sendMessage(player, ConfigHandler.backupReminderMessage, ChatFormatting.DARK_GRAY);
+				MessageFunctions.sendMessage(player, ConfigHandler.backupReminderMessage, ChatFormatting.DARK_GRAY);
 			}
 		}
 	}
