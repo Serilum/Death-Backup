@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "deathbackup",
-  "version": "3.2",
+  "version": "3.3",
 
   "name": "Death Backup",
   "description": "Creates a backup of an inventory right before a player death, which can be loaded via a command.",
@@ -23,7 +23,7 @@
     "fabric": "*",
     "minecraft": ">=1.19",
     "java": ">=17",
-    "collective": ">=7.21"
+    "collective": ">=7.36"
   },
 
   "custom": {
@@ -38,21 +38,18 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://ricksouth.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
 	  " ",
 	  "Membership sponsors:",
-	  " Adam E",
 	  " Alister",
+	  " Andrean Olgo",
 	  " aternosorg",
 	  " Cherriesaurus",
-	  " FireStriker",
-	  " Greg Johnson",
+	  " Jack",
 	  " Kreezxil",
 	  " Michael W. S.",
 	  " Mir3JonCZ",
-	  " Rebecca Hb.",
 	  " Shana Gitnick",
-	  " silver Bowsman",
 	  " Tyler Behl"
   ]
 }
