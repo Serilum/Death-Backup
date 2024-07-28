@@ -1,6 +1,7 @@
 package com.natamus.deathbackup;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.deathbackup.cmds.CommandDeathBackup;
 import com.natamus.deathbackup.events.DeathBackupEvent;
 import com.natamus.deathbackup.util.Reference;
@@ -16,6 +17,10 @@ public class ModFabric implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		setGlobalConstants();
 		ModCommon.init();
 
