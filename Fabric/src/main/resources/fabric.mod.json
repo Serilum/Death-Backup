@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "deathbackup",
-  "version": "3.4",
+  "version": "3.5",
 
   "name": "Death Backup",
   "description": "Creates a backup of an inventory right before a player death, which can be loaded via a command.",
@@ -23,7 +23,7 @@
     "fabric": "*",
     "minecraft": ">=1.21",
     "java": ">=21",
-    "collective": ">=7.89"
+    "collective": ">=7.91"
   },
 
   "custom": {
@@ -45,8 +45,10 @@
 	  " Andrean Olgo",
 	  " aternosorg",
 	  " Cherriesaurus",
-	  " LyraKeaton",
+	  " David Sanchez",
+	  " drdog111",
 	  " Michael W. S.",
+	  " t128",
 	  " Tyler Behl",
 	  " XAgent"
   ]
