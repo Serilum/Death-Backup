@@ -1,0 +1,41 @@
+package com.natamus.deathbackup.forge.events;
+
+import com.natamus.deathbackup.cmds.CommandDeathBackup;
+import com.natamus.deathbackup.events.DeathBackupEvent;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
+
+import java.lang.invoke.MethodHandles;
+
+public class ForgeDeathBackupEvent {
+	public static void registerEventsInBus() {
+		BusGroup.DEFAULT.register(MethodHandles.lookup(), ForgeDeathBackupEvent.class);
+	}
+
+    @SubscribeEvent
+    public static void registerCommands(RegisterCommandsEvent e) {
+    	CommandDeathBackup.register(e.getDispatcher());
+    }
+
+	@SubscribeEvent
+	public static void onPlayerDeath(LivingDeathEvent e) {
+		Entity entity = e.getEntity();
+		Level level = entity.level();
+		if (level.isClientSide) {
+			return;
+		}
+
+		if (!(entity instanceof Player)) {
+			return;
+		}
+
+		DeathBackupEvent.onPlayerDeath((ServerLevel)level, (ServerPlayer)entity);
+	}
+}
