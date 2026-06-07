@@ -1,5 +1,5 @@
 <h2>Death Backup</h2>
-<p><a href="https://github.com/Serilum/Death-Backup"><img src="https://serilum.com/assets/data/logo/death-backup.png"></a></p><h2>Download</h2>
+<p><a href="https://github.com/Serilum/Death-Backup"><img src="https://serilum.com/assets/images/logo/death-backup.png"></a></p><h2>Download</h2>
 <p>You can download Death Backup on CurseForge and Modrinth:</p><p>&nbsp;&nbsp;CurseForge: &nbsp;&nbsp;<a href="https://curseforge.com/minecraft/mc-mods/death-backup">https://curseforge.com/minecraft/mc-mods/death-backup</a><br>&nbsp;&nbsp;Modrinth: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://modrinth.com/mod/death-backup">https://modrinth.com/mod/death-backup</a></p>
 <h2>Issue Tracker</h2>
 <p>To keep a better overview of all mods, the issue tracker is located in a separate repository.<br>&nbsp;&nbsp;For issues, ideas, suggestions or anything else, please follow this link:</p>
