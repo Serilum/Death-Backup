@@ -1,4 +1,5 @@
 package com.natamus.deathbackup.cmds;
+import com.natamus.deathbackup.util.Reference;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
@@ -21,7 +22,7 @@ public class CommandDeathBackup {
 		dispatcher.register(Commands.literal("deathbackup").requires((iCommandSender) -> iCommandSender.hasPermission(2))
 			.executes((command) -> {
 				CommandSourceStack source = command.getSource();
-				MessageFunctions.sendMessage(source, "Death Backup usage:", ChatFormatting.DARK_GREEN);
+				MessageFunctions.sendTranslatableMessage(source, "collective.shared.message.usage", ChatFormatting.DARK_GREEN, Reference.NAME);
 				MessageFunctions.sendMessage(source, "/deathbackup list - Lists all available backups.", ChatFormatting.DARK_GREEN);
 				MessageFunctions.sendMessage(source, "/deathbackup load <index> - Loads the backup with <index> from '/deathbackup list'. Index 0 is the last death.", ChatFormatting.DARK_GREEN);
 				return 1;
@@ -34,18 +35,18 @@ public class CommandDeathBackup {
 					player = source.getPlayerOrException();
 				}
 				catch (CommandSyntaxException ex) {
-					MessageFunctions.sendMessage(source, "This command can only be executed as a player in-game.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "collective.shared.message.playeronly", ChatFormatting.RED);
 					return 1;
 				}
 				
 				Level world = player.level();
 				if (world.isClientSide) {
-					MessageFunctions.sendMessage(source, "[Error] The world is not remote, unable to load death backup.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "[Error] ", "collective.deathbackup.message.worldremoteunable", ChatFormatting.RED);
 					return 1;
 				}
 				
 				if (!(world instanceof ServerLevel)) {
-					MessageFunctions.sendMessage(source, "[Error] Cannot find the world's server, unable to load death backup.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "[Error] ", "collective.deathbackup.message.cannotfindworld", ChatFormatting.RED);
 					return 1;
 				}
 				
@@ -54,7 +55,7 @@ public class CommandDeathBackup {
 				
 				List<String> backups = Util.getListOfBackups(serverworld, playername);
 
-				MessageFunctions.sendMessage(source, "Last Death Backups: (<index>: <date>)", ChatFormatting.DARK_GREEN, true);
+				MessageFunctions.sendTranslatableMessage(source, "collective.deathbackup.message.lastdeathbackups", true, ChatFormatting.DARK_GREEN);
 				
 				int index = 0;
 				for (String ymdhis : backups) {
@@ -65,7 +66,7 @@ public class CommandDeathBackup {
 					}
 				}
 				
-				MessageFunctions.sendMessage(source, "Load the backup with '/deathbackup load <index>'.", ChatFormatting.YELLOW);
+				MessageFunctions.sendTranslatableMessage(source, "collective.deathbackup.message.loadbackupdeathbackup", ChatFormatting.YELLOW);
 				return 1;
 			}))
 			.then(Commands.literal("load")
@@ -77,18 +78,18 @@ public class CommandDeathBackup {
 					player = source.getPlayerOrException();
 				}
 				catch (CommandSyntaxException ex) {
-					MessageFunctions.sendMessage(source, "This command can only be executed as a player in-game.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "collective.shared.message.playeronly", ChatFormatting.RED);
 					return 1;
 				}
 				
 				Level world = player.level();
 				if (world.isClientSide) {
-					MessageFunctions.sendMessage(source, "[Error] The world is not remote, unable to load death backup.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "[Error] ", "collective.deathbackup.message.worldremoteunable", ChatFormatting.RED);
 					return 1;
 				}
 				
 				if (!(world instanceof ServerLevel)) {
-					MessageFunctions.sendMessage(source, "[Error] Cannot find the world's server, unable to load death backup.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "[Error] ", "collective.deathbackup.message.cannotfindworld", ChatFormatting.RED);
 					return 1;
 				}
 				
@@ -99,19 +100,19 @@ public class CommandDeathBackup {
 				
 				int amount = IntegerArgumentType.getInteger(command, "backup_index");
 				if (amount < 0 || amount >= backups.size()) {
-					MessageFunctions.sendMessage(source, "The index " + amount + " is invalid.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "collective.deathbackup.message.indexinvalid", ChatFormatting.RED, amount);
 					return 0;
 				}
 				
 				String backupfilename = backups.get(amount);
 				String gearstring = Util.getGearStringFromFile(serverworld, playername, backupfilename);
 				if (gearstring.equals("")) {
-					MessageFunctions.sendMessage(source, "[Error] Unable to read the backup file.", ChatFormatting.RED);
+					MessageFunctions.sendTranslatableMessage(source, "[Error] ", "collective.deathbackup.message.unablereadbackup", ChatFormatting.RED);
 					return 0;
 				}
 
 				PlayerFunctions.setPlayerGearFromString(player, gearstring);
-				MessageFunctions.sendMessage(source, "Successfully loaded the death backup from " + DateFunctions.ymdhisToReadable(backupfilename) + " into your inventory.", ChatFormatting.DARK_GREEN);
+				MessageFunctions.sendTranslatableMessage(source, "collective.deathbackup.message.successfullyloadeddeath", ChatFormatting.DARK_GREEN, DateFunctions.ymdhisToReadable(backupfilename));
 				return 1;
 			})))
 		);
