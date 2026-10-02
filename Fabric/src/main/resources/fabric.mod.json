@@ -1,35 +1,35 @@
 {
   "schemaVersion": 1,
   "id": "deathbackup",
-  "version": "3.6",
+  "version": "3.7",
 
   "name": "Death Backup",
   "description": "Creates a backup of an inventory right before a player death, which can be loaded via a command.",
-  "authors": [ "Rick South" ],
+  "authors": [ "Serilum" ],
   "contact": {
     "homepage": "https://serilum.com/mod/death-backup",
     "sources": "https://github.com/Serilum/Death-Backup",
     "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Death%20Backup"
   },
 
-  "license": "All Right Reserved",
+  "license": "All Rights Reserved",
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": { "main": [ "com.natamus.deathbackup.ModFabric" ], "modmenu": [ "com.natamus.deathbackup.fabric.config.IntegrateModMenu" ] },
+  "entrypoints": { "main": [ "com.serilum.deathbackup.ModFabric" ], "modmenu": [ "com.serilum.deathbackup.fabric.config.IntegrateModMenu" ] },
 
   "depends": {
     "fabricloader": ">=0.15.0",
     "fabric": "*",
     "minecraft": ">=1.21",
     "java": ">=21",
-    "collective": ">=8.25"
+    "collective": ">=8.40"
   },
 
   "custom": {
     "modmenu": {
       "links": {
-        "Donate <3" : "https://ricksouth.com/donate"
+        "Donate <3" : "https://serilum.com/donate"
       }
     }
   },
@@ -38,14 +38,14 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate",
 	  " ",
 	  "Membership sponsors:",
 	  " Andrean Olgo",
+	  " AnyankaT",
 	  " aternosorg",
 	  " Cherriesaurus",
 	  " Linda Jansen",
-	  " Michelle Smith",
 	  " MWS",
 	  " Tyler Behl"
   ]
