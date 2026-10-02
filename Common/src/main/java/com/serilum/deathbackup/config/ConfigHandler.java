@@ -1,7 +1,7 @@
-package com.natamus.deathbackup.config;
+package com.serilum.deathbackup.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.deathbackup.util.Reference;
+import com.serilum.deathbackup.util.Reference;
 
 import java.util.Arrays;
 import java.util.HashMap;

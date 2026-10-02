@@ -1,10 +1,10 @@
-package com.natamus.deathbackup;
+package com.serilum.deathbackup;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.deathbackup.forge.config.IntegrateForgeConfig;
-import com.natamus.deathbackup.forge.events.ForgeDeathBackupEvent;
-import com.natamus.deathbackup.util.Reference;
+import com.serilum.deathbackup.forge.config.IntegrateForgeConfig;
+import com.serilum.deathbackup.forge.events.ForgeDeathBackupEvent;
+import com.serilum.deathbackup.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -32,7 +32,7 @@ public class ModForge {
 	}
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
-    	MinecraftForge.EVENT_BUS.register(ForgeDeathBackupEvent.class);
+		MinecraftForge.EVENT_BUS.register(ForgeDeathBackupEvent.class);
 	}
 
 	private static void setGlobalConstants() {

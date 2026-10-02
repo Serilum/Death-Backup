@@ -1,7 +1,7 @@
-package com.natamus.deathbackup.forge.config;
+package com.serilum.deathbackup.forge.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.deathbackup.util.Reference;
+import com.serilum.deathbackup.util.Reference;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 

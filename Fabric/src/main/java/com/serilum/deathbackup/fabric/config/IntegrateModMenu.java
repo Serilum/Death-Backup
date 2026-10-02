@@ -1,7 +1,7 @@
-package com.natamus.deathbackup.fabric.config;
+package com.serilum.deathbackup.fabric.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.deathbackup.util.Reference;
+import com.serilum.deathbackup.util.Reference;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 

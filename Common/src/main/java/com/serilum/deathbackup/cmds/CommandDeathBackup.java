@@ -1,5 +1,5 @@
-package com.natamus.deathbackup.cmds;
-import com.natamus.deathbackup.util.Reference;
+package com.serilum.deathbackup.cmds;
+import com.serilum.deathbackup.util.Reference;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
@@ -7,7 +7,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.natamus.collective.functions.DateFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
 import com.natamus.collective.functions.MessageFunctions;
-import com.natamus.deathbackup.util.Util;
+import com.serilum.deathbackup.util.Util;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

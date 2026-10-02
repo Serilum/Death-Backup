@@ -1,10 +1,10 @@
-package com.natamus.deathbackup.events;
+package com.serilum.deathbackup.events;
 
 import com.natamus.collective.functions.DateFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
 import com.natamus.collective.functions.MessageFunctions;
-import com.natamus.deathbackup.config.ConfigHandler;
-import com.natamus.deathbackup.util.Util;
+import com.serilum.deathbackup.config.ConfigHandler;
+import com.serilum.deathbackup.util.Util;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.server.level.ServerLevel;

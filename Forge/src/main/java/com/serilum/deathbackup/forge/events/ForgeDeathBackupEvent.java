@@ -1,7 +1,7 @@
-package com.natamus.deathbackup.forge.events;
+package com.serilum.deathbackup.forge.events;
 
-import com.natamus.deathbackup.cmds.CommandDeathBackup;
-import com.natamus.deathbackup.events.DeathBackupEvent;
+import com.serilum.deathbackup.cmds.CommandDeathBackup;
+import com.serilum.deathbackup.events.DeathBackupEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
@@ -12,10 +12,10 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class ForgeDeathBackupEvent {
-    @SubscribeEvent
-    public static void registerCommands(RegisterCommandsEvent e) {
-    	CommandDeathBackup.register(e.getDispatcher());
-    }
+	@SubscribeEvent
+	public static void registerCommands(RegisterCommandsEvent e) {
+		CommandDeathBackup.register(e.getDispatcher());
+	}
 
 	@SubscribeEvent
 	public static void onPlayerDeath(LivingDeathEvent e) {

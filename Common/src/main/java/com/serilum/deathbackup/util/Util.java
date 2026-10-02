@@ -1,4 +1,4 @@
-package com.natamus.deathbackup.util;
+package com.serilum.deathbackup.util;
 
 import com.natamus.collective.functions.WorldFunctions;
 import net.minecraft.server.level.ServerLevel;

@@ -1,10 +1,10 @@
-package com.natamus.deathbackup;
+package com.serilum.deathbackup;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.deathbackup.cmds.CommandDeathBackup;
-import com.natamus.deathbackup.events.DeathBackupEvent;
-import com.natamus.deathbackup.util.Reference;
+import com.serilum.deathbackup.cmds.CommandDeathBackup;
+import com.serilum.deathbackup.events.DeathBackupEvent;
+import com.serilum.deathbackup.util.Reference;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;

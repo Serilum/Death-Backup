@@ -1,6 +1,6 @@
-package com.natamus.deathbackup;
+package com.serilum.deathbackup;
 
-import com.natamus.deathbackup.config.ConfigHandler;
+import com.serilum.deathbackup.config.ConfigHandler;
 
 public class ModCommon {
 
